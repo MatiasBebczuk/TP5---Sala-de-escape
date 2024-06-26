@@ -2,7 +2,7 @@ class Escape{
     static string[] incognitasSalas;
     static int estadoJuego;
     private static void InicializarJuego(){
-        incognitasSalas = new string[]{"j"};
+        incognitasSalas = new string[]{"Soy el guardián de la guerra"};
         estadoJuego = 1;
     }
     public static int GetEstadoJuego(){
