@@ -30,23 +30,24 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Habitacion(int sala, string clave)
         {
-            bool salaCorrecta = true;
-            bool claveCorrecta = true;
-
-            if (salaCorrecta == false)
+            string habitacion = "HabitacionX";
+            
+            if (sala != Escape.GetEstadoJuego())
             {
-
                 return RedirectToAction("Comenzar"); 
             }
-
-            if (claveCorrecta == false)
+            else
             {
-
-                ViewBag.Error = "La respuesta escrita fue incorrecta."; 
-                return View(); 
+                if (!Escape.ResolverSala(sala, clave))
+                {
+                    ViewBag.Error = "La respuesta escrita fue incorrecta."; 
+                }
+                else if(Escape.GetEstadoJuego() > 4){
+                    habitacion = "Victoria";
+                }
             }
-
-            return View("Victoria");
+            habitacion.Replace('X', (char)Escape.GetEstadoJuego());
+            return View(habitacion);
         }
 
         public IActionResult Privacy()
