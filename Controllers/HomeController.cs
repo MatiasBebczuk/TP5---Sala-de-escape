@@ -25,20 +25,21 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Comenzar()
         {
-            return View();
+            return View("Habitacion1");
         }
 
         public IActionResult Habitacion(int sala, string clave)
         {
             string habitacion = "HabitacionX";
+            bool salaResuelta = Escape.ResolverSala(sala, clave);
             
             if (sala != Escape.GetEstadoJuego())
             {
-                return RedirectToAction("Comenzar"); 
+                return RedirectToAction("Comenzar");
             }
             else
             {
-                if (!Escape.ResolverSala(sala, clave))
+                if (!salaResuelta)
                 {
                     ViewBag.Error = "La respuesta escrita fue incorrecta."; 
                 }

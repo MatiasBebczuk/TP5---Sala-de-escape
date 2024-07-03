@@ -9,7 +9,7 @@ class Escape{
         return estadoJuego;
     }
     public static bool ResolverSala(int Sala, string Incognita){
-        if(Escape.incognitasSalas == null){ Escape.InicializarJuego(); }
+        if (Object.Equals(incognitasSalas, default(int))){ InicializarJuego();}
         if(incognitasSalas[estadoJuego - 1] == Incognita){
             estadoJuego++;
             return true;

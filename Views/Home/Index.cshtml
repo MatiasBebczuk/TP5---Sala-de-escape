@@ -5,7 +5,7 @@
 
 <div class="text-center">   
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>To the dungeon</p>
 </div>
 
 <body>
@@ -14,9 +14,9 @@
             <img src="imagen.png" alt="Logo del juego" class="header-logo">
             <nav>
                 <ul class="header-links">
-                    <li><a href="#tutorial">Tutorial del juego</a></li>
-                    <li><a href="#inicio">Inicio del juego</a></li>
-                    <li><a href="#creditos">Créditos</a></li>
+                    <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
+                    <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
+                    <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
                 </ul>
             </nav>
         </div>
