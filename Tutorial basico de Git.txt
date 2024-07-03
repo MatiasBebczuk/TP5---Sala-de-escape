@@ -1,0 +1,11 @@
+Tutorial basico de Git
+
+git clone == clonar el repo al equipo
+
+git add . == Añadis los contenidos de la carpeta (el punto es para añadir todo)
+
+git commit -m "" == Para crear una version, las comillas son para darle un nombre
+
+git push == Subir los cambios al main en la nube
+
+git pull == para añadir los cambios hechos luego de clonar; se necesita estar en la misma version del main para hacer push (si tira error, probablemente tengas que hacer pull)
