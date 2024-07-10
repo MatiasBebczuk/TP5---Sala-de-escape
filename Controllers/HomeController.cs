@@ -17,6 +17,10 @@ namespace TP5___Sala_de_escape.Controllers
         {
             return View();
         }
+        public IActionResult Creditos()
+        {
+            return View();
+        }
 
         public IActionResult Tutorial()
         {
