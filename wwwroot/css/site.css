@@ -1,6 +1,5 @@
 html {
   font-size: 14px;
-  background-image: url("wwwroot/imgs/quake-shambler.gif");
 }
 
 @media (min-width: 768px) {
@@ -20,4 +19,5 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-image: url("/imgs/quake-shambler.gif");
 }

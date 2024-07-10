@@ -52,7 +52,7 @@ namespace TP5___Sala_de_escape.Controllers
                     habitacion = "Victoria";
                 }
             }
-            habitacion += (char)Escape.GetEstadoJuego();
+            habitacion += Escape.GetEstadoJuego();
             Console.WriteLine(habitacion);
             return View(habitacion);
         }
