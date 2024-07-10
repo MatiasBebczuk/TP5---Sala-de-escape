@@ -1,0 +1,16 @@
+@using TP5___Sala_de_escape.Models
+@{
+    var remainingTime = Escape.GetRemainingTime();
+    var minutes = remainingTime.Minutes;
+    var seconds = remainingTime.Seconds;
+
+    if (Escape.IsGameOver())
+    {
+        Response.Redirect("/Home/Derrota");
+    }
+}
+
+<div id="timer">
+    Tiempo restante: @minutes:@seconds
+</div>
+

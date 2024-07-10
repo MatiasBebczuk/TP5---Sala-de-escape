@@ -1,28 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var remainingTime = (TimeSpan)ViewBag.RemainingTime;
 }
-    <link rel="stylesheet" href="../CSS/styles1.css">
+<link rel="stylesheet" href="../CSS/styles1.css">
+
+<div id="timer">
+    Tiempo restante: @remainingTime.Minutes:@remainingTime.Seconds
+</div>
 
 <div class="text-center">   
     <h1 class="display-4">Welcome</h1>
     <p>To the dungeon</p>
 </div>
 
-<body>
-    <header>
-        <div class="header-content">
-            <img src="/imgs/logo.png" alt="Logo del juego" class="header-logo">
-            <nav>
-                <ul class="header-links">
-                    <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
-                    <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
-                    <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-<img src= "../wwwroot/imgs/Labo.png">
+<header>
+    <div class="header-content">
+        <img src="/imgs/logo.png" alt="Logo del juego" class="header-logo">
+        <nav>
+            <ul class="header-links">
+                <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
+                <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
+                <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-</body>
-</html>
+<img src="../wwwroot/imgs/Labo.png">
