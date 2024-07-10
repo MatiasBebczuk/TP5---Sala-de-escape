@@ -40,7 +40,7 @@ namespace TP5___Sala_de_escape.Controllers
             
             if (sala != Escape.GetEstadoJuego() - 1)
             {
-                return RedirectToAction("Comenzar");
+                return View((habitacion + Escape.GetEstadoJuego()));
             }
             else
             {
@@ -52,7 +52,7 @@ namespace TP5___Sala_de_escape.Controllers
                     habitacion = "Victoria";
                 }
             }
-            habitacion += Escape.GetEstadoJuego();
+            if(habitacion != "Victoria"){ habitacion += Escape.GetEstadoJuego(); }
             Console.WriteLine(habitacion);
             return View(habitacion);
         }
