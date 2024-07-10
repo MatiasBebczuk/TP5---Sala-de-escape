@@ -15,6 +15,7 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Index()
         {
+            Escape.Reset();
             return View();
         }
         public IActionResult Creditos()
@@ -34,10 +35,10 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Habitacion(int sala, string clave)
         {
-            string habitacion = "HabitacionX";
+            string habitacion = "Habitacion";
             bool salaResuelta = Escape.ResolverSala(sala, clave);
             
-            if (sala != Escape.GetEstadoJuego())
+            if (sala != Escape.GetEstadoJuego() - 1)
             {
                 return RedirectToAction("Comenzar");
             }
@@ -51,7 +52,8 @@ namespace TP5___Sala_de_escape.Controllers
                     habitacion = "Victoria";
                 }
             }
-            habitacion.Replace('X', (char)Escape.GetEstadoJuego());
+            habitacion += (char)Escape.GetEstadoJuego();
+            Console.WriteLine(habitacion);
             return View(habitacion);
         }
 
