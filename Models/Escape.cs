@@ -1,5 +1,5 @@
 class Escape{
-    public static string[] incognitasSalas;
+    public static string[] incognitasSalas = new string[]{};
     static int estadoJuego;
     private static void InicializarJuego(){
         incognitasSalas = new string[]{"Soy el guardián de la guerra"};
@@ -9,7 +9,7 @@ class Escape{
         return estadoJuego;
     }
     public static bool ResolverSala(int Sala, string Incognita){
-        if (Object.Equals(incognitasSalas, default(int))){ InicializarJuego();}
+        if (Object.Equals(incognitasSalas, default(string))){ InicializarJuego();}
         if(incognitasSalas[estadoJuego - 1] == Incognita){
             estadoJuego++;
             return true;
