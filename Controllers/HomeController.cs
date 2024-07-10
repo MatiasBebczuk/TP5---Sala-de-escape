@@ -15,12 +15,16 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Index()
         {
+<<<<<<< HEAD
             if (Escape.IsGameOver())
             {
                 return RedirectToAction("Derrota");
             }
 
             ViewBag.RemainingTime = Escape.GetRemainingTime();
+=======
+            Escape.Reset();
+>>>>>>> d3e522f5c2d7086898223ae606f79bd0a34f8a2d
             return View();
         }
 
@@ -59,6 +63,7 @@ namespace TP5___Sala_de_escape.Controllers
 
         public IActionResult Habitacion(int sala, string clave)
         {
+<<<<<<< HEAD
             if (Escape.IsGameOver())
             {
                 return RedirectToAction("Derrota");
@@ -68,8 +73,14 @@ namespace TP5___Sala_de_escape.Controllers
             bool salaResuelta = Escape.ResolverSala(sala, clave);
 
             if (sala != Escape.GetEstadoJuego())
+=======
+            string habitacion = "Habitacion";
+            bool salaResuelta = Escape.ResolverSala(sala, clave);
+            
+            if (sala != Escape.GetEstadoJuego() - 1)
+>>>>>>> d3e522f5c2d7086898223ae606f79bd0a34f8a2d
             {
-                return RedirectToAction("Comenzar");
+                return View((habitacion + Escape.GetEstadoJuego()));
             }
             else
             {
@@ -83,8 +94,13 @@ namespace TP5___Sala_de_escape.Controllers
                     Escape.StopGame();
                 }
             }
+<<<<<<< HEAD
             habitacion = habitacion.Replace('X', Escape.GetEstadoJuego().ToString());
             ViewBag.RemainingTime = Escape.GetRemainingTime();
+=======
+            if(habitacion != "Victoria"){ habitacion += Escape.GetEstadoJuego(); }
+            Console.WriteLine(habitacion);
+>>>>>>> d3e522f5c2d7086898223ae606f79bd0a34f8a2d
             return View(habitacion);
         }
 

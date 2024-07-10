@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/habitacion4.css">
+    <link rel="stylesheet" href="/css/habitacion4.css">
     <title>Habitacion 4</title>
 </head>
 <body>
@@ -15,13 +15,12 @@
     <h2>Estas en la última habitación para poder salir del castillo, en alguna parte debería da haber una llave para salir de aquí. </h2>
      <img src = "/imgs/HabitacionFinal.jpeg">
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
-    <input type="hidden" name="sala" value="4">
-    <label for="clave">Ingresa la clave: </label>
-    <input type="text" id="clave" name="clave" required>
-    <input type="submit" value="VALIDAR"> 
+        <input type="hidden" name="sala" value="4">
+        <label for="clave">Ingresa la clave: </label>
+        <input type="text" id="clave" name="clave" required>
+        <input type="submit" value="VALIDAR"> 
     </form> 
-    <button onclick="alert('pista 1: descripcion...')">Pista 1 </button>
-    <button onclick="alert('pista 2: descripcion...')">Pista 2 </button>
- 
+    <button onclick="alert('Pista 1: Lorem ipsum dolor sit amet')">Pista 1</button>
+    <button onclick="alert('Pista 2: descripcion...')">Pista 2</button>
 </body>
 </html>

@@ -6,22 +6,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/habitacion2.css">
+    <link rel="stylesheet" href="/css/habitacion2.css">
     <title>Habitacion 2</title>
 </head>
 <body>
     <h1>El Laboratorio</h1>
     <h2>Logras salir del vestibulo y te encuentras en un laboratorio sin salida, en este laboratorio se encuentran muchas pocimas y libros extraños, quizá uno de estos tenga la solución para salir de aquí... </h2>
-     <img src = "../wwwroot/imgs/Labo_1.png">
+     <img src = "/imgs/Labo_1.png">
 
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
-    <input type="hidden" name="sala" value="2">
-    <label for="clave">Ingresa la clave: </label>
-    <input type="text" id="clave" name="clave" required>
-    <input type="submit" value="VALIDAR"> 
+        <input type="hidden" name="sala" value="2">
+        <label for="clave">Ingresa la clave: </label>
+        <input type="text" id="clave" name="clave" required>
+        <input type="submit" value="VALIDAR"> 
     </form> 
 
-    <button onclick="alert('pista 1: descripcion...')">Pista 1 </button>
-    <button onclick="alert('pista 2: descripcion...')">Pista 2 </button>
+    <button onclick="alert('Pista 1: Lorem ipsum dolor sit amet')">Pista 1</button>
+    <button onclick="alert('Pista 2: descripcion...')">Pista 2</button>
 </body>
 </html>
