@@ -2,9 +2,18 @@
     ViewData["Title"] = "Home Page";
     var remainingTime = (TimeSpan)ViewBag.RemainingTime;
 }
-<link rel="stylesheet" href="/css/Index.css">
 
-<div id="timer">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/Index.css">
+    <title>Sala de escape</title>
+  </head>
+
+<header>
+  <div id="timer">
     Tiempo restante: @remainingTime.Minutes: @remainingTime.Seconds
 </div>
 
@@ -12,9 +21,6 @@
     <h1 class="display-4">Welcome</h1>
     <p>To the dungeon</p>
 </div>
-
-
-<header>
     <div class="header-content">
         <img src="/imgs/logo.png" alt="Logo del juego" class="header-logo">
         <nav>
@@ -26,6 +32,8 @@
         </nav>
     </div>
 </header>
-<body>
-    <img src= "/imgs/castle.jpeg">
-</body>
+
+  <body>
+      <img src= "/imgs/castle.jpeg">
+  </body>
+</html>
