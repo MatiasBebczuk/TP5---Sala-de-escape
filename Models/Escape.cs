@@ -8,7 +8,9 @@ class Escape{
         incognitasSalas = new string[]{"Soy el guardián de la guerra", "QUAKE", "Lorem ipsum dolor sit amet", "hey hey people sseth here"};
         estadoJuego = 1;
         System.Timers.Timer tiempoJugado = new System.Timers.Timer(1000);
+        DateTime tiempoInicioJuego = DateTime.Now;
         tiempoJugado.Elapsed += Tick;
+        tiempoJugado.Enabled = true;
     }
 
     public static int GetEstadoJuego()
