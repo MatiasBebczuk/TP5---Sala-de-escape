@@ -40,15 +40,14 @@ class Escape{
 
     public static bool IsGameOver()
     {
-         
-        Console.WriteLine(TimeSpan.Zero);
-        Console.WriteLine(GetRemainingTime() );
+        Console.WriteLine(DateTime.Now - startTime);
+        Console.WriteLine(GetRemainingTime());
         
-        return GetRemainingTime() <= TimeSpan.Zero;
+        return GetRemainingTime() <= TimeSpan.MinValue;
     }
 
     public static void StopGame()
     {
-        gameDuration = TimeSpan.Zero;
+        gameDuration = TimeSpan.FromMinutes(5);
     }
 }
