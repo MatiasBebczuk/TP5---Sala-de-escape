@@ -70,7 +70,7 @@ namespace TP5___Sala_de_escape.Controllers
             {
                 return View((habitacion + Escape.GetEstadoJuego()));
             }
-            else
+            else 
             {
                 if (!salaResuelta)
                 {
