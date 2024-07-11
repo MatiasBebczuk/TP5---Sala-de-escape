@@ -16,53 +16,26 @@ namespace TP5___Sala_de_escape.Controllers
         public IActionResult Index()
         {
             Escape.Reset();
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             return View();
         }
 
         public IActionResult Creditos()
         {
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
-
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             return View();
         }
 
         public IActionResult Tutorial()
         {
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
-
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             return View();
         }
 
         public IActionResult Comenzar()
         {
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
-
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             return View("Habitacion1");
         }
 
         public IActionResult Habitacion(int sala, string clave)
         {
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
             string habitacion = "Habitacion";
             bool salaResuelta = Escape.ResolverSala(sala, clave);
             
@@ -79,23 +52,15 @@ namespace TP5___Sala_de_escape.Controllers
                 else if (Escape.GetEstadoJuego() > 4)
                 {
                     habitacion = "Victoria";
-                    Escape.StopGame();
                 }
             }
             if(habitacion != "Victoria"){ habitacion += Escape.GetEstadoJuego(); }
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             Console.WriteLine(habitacion);
             return View(habitacion);
         }
 
         public IActionResult Privacy()
         {
-            if (Escape.IsGameOver())
-            {
-                return RedirectToAction("Derrota");
-            }
-
-            ViewBag.RemainingTime = Escape.GetRemainingTime();
             return View();
         }
 

@@ -1,4 +1,4 @@
-
+using System.Timers;
 class Escape{
     public static string[] incognitasSalas = new string[4];
     static int estadoJuego;
@@ -7,7 +7,8 @@ class Escape{
     private static void InicializarJuego(){
         incognitasSalas = new string[]{"Soy el guardián de la guerra", "Lorem ipsum dolor sit amet", "QUAKE", "hey hey people sseth here"};
         estadoJuego = 1;
-        startTime = DateTime.Now;
+        System.Timers.Timer tiempoJugado = new System.Timers.Timer(1000);
+        tiempoJugado.Elapsed += Tick;
     }
 
     public static int GetEstadoJuego()
@@ -33,21 +34,8 @@ class Escape{
     public static void Reset(){
         estadoJuego = 0;
     }
-     public static TimeSpan GetRemainingTime()
+    private static void Tick(object sender, ElapsedEventArgs e)
     {
-        return gameDuration - (DateTime.Now - startTime);
-    }
-
-    public static bool IsGameOver()
-    {
-        Console.WriteLine(DateTime.Now - startTime);
-        Console.WriteLine(GetRemainingTime());
-        
-        return GetRemainingTime() <= TimeSpan.MinValue;
-    }
-
-    public static void StopGame()
-    {
-        gameDuration = TimeSpan.FromMinutes(5);
+        Console.WriteLine("Tick! The time is {0:HH:mm:ss.fff}", e.SignalTime);
     }
 }
