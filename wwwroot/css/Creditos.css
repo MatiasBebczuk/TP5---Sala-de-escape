@@ -18,3 +18,12 @@
     height: auto;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3%;
+}
