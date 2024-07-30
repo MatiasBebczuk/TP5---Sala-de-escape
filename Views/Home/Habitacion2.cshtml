@@ -16,25 +16,25 @@
        <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
 
     <script>
-                let tiempo = parseInt(localStorage.getItem('tiempo')) || 600;
-                    
-                let timer = setInterval(function() {
-                    let minutes = Math.floor(tiempo / 60);
-                    let seconds = tiempo % 60;
-                    document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        let tiempo = parseInt(localStorage.getItem('tiempo')) || 600;
             
-                    // Save the current timer state to localStorage
-                    localStorage.setItem('tiempo', tiempo);
-            
-                    if (tiempo <= 0) {
-                        clearInterval(timer);
-                        alert("¡Se acabó el tiempo!");
-                        // Reset timer in localStorage when the game is lost
-                        localStorage.removeItem('tiempo'); // This effectively resets the timer for a new game
-                    }
-                    tiempo--;
-                }, 1000);
-            </script>
+        let timer = setInterval(function() {
+            let minutes = Math.floor(tiempo / 60);
+            let seconds = tiempo % 60;
+            document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    
+            // Save the current timer state to localStorage
+            localStorage.setItem('tiempo', tiempo);
+    
+            if (tiempo <= 0) {
+                clearInterval(timer);
+                alert("¡Se acabó el tiempo!");
+                // Reset timer in localStorage when the game is lost
+                localStorage.removeItem('tiempo'); // This effectively resets the timer for a new game
+            }
+            tiempo--;
+        }, 1000);
+    </script>
     <div class="image-container">
         <img src="/imgs/Labo_1.png" alt="Imagen Central" id="mainImage">
         <button class="overlay-button" id="toggleButton1"><i class="fas fa-eye"></i></button>
@@ -45,9 +45,6 @@
         <img src="/imgs/A_Habitacion_3.png" alt="Habitación" id="toggleImage">
     </div>
     <script src="/js/Habitacion2Script.js"></script>
-    
-    <img src = "">
-
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
     <input type="hidden" name="sala" value="2">
     <label for="clave">Ingresa la clave: </label>

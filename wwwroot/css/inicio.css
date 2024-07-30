@@ -3,12 +3,6 @@ body h1, body form{
   justify-content: center;
 }
 
-body div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .image-container {
   position: relative;
   width: 80%;
@@ -61,7 +55,7 @@ body div{
 
 /* Imágenes específicas para cada botón */
 #toggleButton1 {
-  background-image: url('/imgs/Habitacion_1/2_Habitacion_1.png');
+  background-image: url('/imgs/Habitacion_1/1_Habitacion_1.png');
 }
 
 #toggleButton2 {

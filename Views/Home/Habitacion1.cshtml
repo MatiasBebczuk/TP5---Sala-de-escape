@@ -16,7 +16,7 @@
     desbloquear con un código, en este vestíbulo se encuentran muchos libros para investigar... </h2>
     <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
     <script>
-        let tiempo = parseInt(localStorage.getItem('tiempo')) || 6000;
+        let tiempo = parseInt(localStorage.getItem('tiempo')) || 300;
             
         let timer = setInterval(function() {
             let minutes = Math.floor(tiempo / 60);
@@ -30,7 +30,7 @@
                 clearInterval(timer);
                 alert("¡Se acabó el tiempo!");
                 
-                localStorage.removeItem('tiempo'); 
+                localStorage.removeItem('tiempo');
             }
             tiempo--;
         }, 1000);
@@ -44,7 +44,6 @@
             <button id="toggleButton4" class="overlay-button"></button>
             <button id="toggleButton5" class="overlay-button"></button>
         </div>
-        <img id="toggleImage" src="otra-imagen.jpg" alt="Imagen de Cambio">
     </div>
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
         <input type="hidden" name="sala" value="1">

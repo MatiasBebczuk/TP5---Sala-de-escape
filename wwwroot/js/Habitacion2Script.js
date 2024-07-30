@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Imágenes específicas para cada botón
     const images = {
-        'toggleButton1': '/imgs/Habitacion_2/A_Habitacion_2.png',
-        'toggleButton2': '/imgs/Habitacion_2/E_Habitacion_2.png',
-        'toggleButton3': '/imgs/Habitacion_2/K_Habitacion_2.png',
-        'toggleButton4': '/imgs/Habitacion_2/Q_Habitacion_2.png',
-        'toggleButton5': '/imgs/Habitacion_2/U_Habitacion_2.png'
+        'toggleButton1': '../imgs/Habitacion_2/A_Habitacion_2.png',
+        'toggleButton2': '../imgs/Habitacion_2/E_Habitacion_2.png',
+        'toggleButton3': '../imgs/Habitacion_2/K_Habitacion_2.png',
+        'toggleButton4': '../imgs/Habitacion_2/Q_Habitacion_2.png',
+        'toggleButton5': '../imgs/Habitacion_2/U_Habitacion_2.png'
     };
 
     toggleButtons.forEach(button => {

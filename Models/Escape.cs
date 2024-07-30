@@ -5,7 +5,7 @@ class Escape{
     static DateTime startTime;
     static TimeSpan gameDuration = TimeSpan.FromMinutes(5);
     private static void InicializarJuego(){
-        incognitasSalas = new string[]{"Soy el guardian de la guerra", "QUAKE" , "Lorem ipsum dolor sit amet", "1101"};
+        incognitasSalas = new string[]{"soy el guardian de la guerra", "quake" , "lorem ipsum dolor sit amet", "1101"};
         estadoJuego = 1;
     }
 
@@ -19,7 +19,7 @@ class Escape{
             Console.WriteLine("estadoJuego != sala");
             return false;
         }
-        else if(incognitasSalas[sala - 1] == incognita){
+        else if(incognitasSalas[sala - 1] == incognita.ToLower()){
             Console.WriteLine("incognitasSalas[sala - 1] == incognita");
             estadoJuego++;
             return true;
