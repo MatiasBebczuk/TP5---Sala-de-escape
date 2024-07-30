@@ -12,10 +12,13 @@
     <title>Habitacion 1</title>
 </head>
 <body>
-    <h1>El Vestíbulo</h1>
-    <h2>Te encuentras en un vestibulo el cual al entrar, su puerta se bloquea y solo se puede 
-    desbloquear con un código, en este vestíbulo se encuentran muchos libros para investigar... </h2>
-    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+    <header>
+        <h1>El Vestíbulo</h1>
+        <h2>Te encuentras en un vestíbulo el cual al entrar, su puerta se bloquea y solo se puede 
+        desbloquear con un código. En este vestíbulo se encuentran muchos libros para investigar...</h2>
+        <h2 class="Tempo">Temporizador: <span id="tiempo"></span></h2>
+    </header>
+
     <div class="image-container">
         <img id="mainImage" src="/imgs/Vestibulo.png" alt="Imagen Principal">
         <div class="button-container">
@@ -26,14 +29,18 @@
             <button id="toggleButton5" class="overlay-button"></button>
         </div>
     </div>
-    <form method="Post" action='@Url.Action("Habitacion", "Home")'>
+
+    <form method="post" action='@Url.Action("Habitacion", "Home")'>
         <input type="hidden" name="sala" value="1">
         <label for="clave">Ingresa la clave: </label>
         <input type="text" id="clave" name="clave" required>
         <input type="submit" value="VALIDAR">
     </form>
 
-    <button onclick="alert('Pista 1: Lee los libros, quizá alla una combinación que encuentres...')">Pista 1</button>
-    <button onclick="alert('Pista 2: Observa las palabras subrayas de cada libro...')">Pista 2</button>
+    <div class="hint-buttons">
+        <button onclick="alert('Pista 1: Lee los libros, quizá haya una combinación que encuentres...')">Pista 1</button>
+        <button onclick="alert('Pista 2: Observa las palabras subrayadas de cada libro...')">Pista 2</button>
+    </div>
 </body>
 </html>
+    
