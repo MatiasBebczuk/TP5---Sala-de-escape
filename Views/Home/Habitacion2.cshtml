@@ -8,33 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/habitacion2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/js/Habitacion2Script.js"></script>
+    <script src="/js/timer.js"></script>
     <title>Habitacion 2</title>
 </head>
 <body>
     <h1>El Laboratorio</h1>
     <h2>Logras salir del vestibulo y te encuentras en un laboratorio sin salida, en este laboratorio se encuentran muchas pocimas y libros extraños, quizá uno de estos tenga la solución para salir de aquí... </h2>
-       <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
-
-    <script>
-        let tiempo = parseInt(localStorage.getItem('tiempo')) || 600;
-            
-        let timer = setInterval(function() {
-            let minutes = Math.floor(tiempo / 60);
-            let seconds = tiempo % 60;
-            document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    
-            // Save the current timer state to localStorage
-            localStorage.setItem('tiempo', tiempo);
-    
-            if (tiempo <= 0) {
-                clearInterval(timer);
-                alert("¡Se acabó el tiempo!");
-                // Reset timer in localStorage when the game is lost
-                localStorage.removeItem('tiempo'); // This effectively resets the timer for a new game
-            }
-            tiempo--;
-        }, 1000);
-    </script>
+    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
     <div class="image-container">
         <img src="/imgs/Labo_1.png" alt="Imagen Central" id="mainImage">
         <button class="overlay-button" id="toggleButton1"><i class="fas fa-eye"></i></button>
@@ -44,7 +25,6 @@
         <button class="overlay-button" id="toggleButton5"><i class="fas fa-eye"></i></button>
         <img src="/imgs/A_Habitacion_3.png" alt="Habitación" id="toggleImage">
     </div>
-    <script src="/js/Habitacion2Script.js"></script>
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
     <input type="hidden" name="sala" value="2">
     <label for="clave">Ingresa la clave: </label>

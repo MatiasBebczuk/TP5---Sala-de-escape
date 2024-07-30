@@ -7,33 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/habitacion3.css">
+    <script src="/js/Habitacion3Script.js"></script>
+    <script src="/js/timer.js"></script>
     <title>Habitacion 3</title>
 </head>
 <body>
     <h1>La Biblioteca Secreta</h1>
     <h2>Haz logrado salir del laboratiorio pero...de rependete...te encuentras con una biblioteca oculta detrás de una estantería giratoria, llena de libros de magia y runas.</h2>
-      <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
-
-    <script>
-        let tiempo = parseInt(localStorage.getItem('tiempo')) || 600;
-            
-        let timer = setInterval(function() {
-            let minutes = Math.floor(tiempo / 60);
-            let seconds = tiempo % 60;
-            document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    
-            // Save the current timer state to localStorage
-            localStorage.setItem('tiempo', tiempo);
-    
-            if (tiempo <= 0) {
-                clearInterval(timer);
-                alert("¡Se acabó el tiempo!");
-                // Reset timer in localStorage when the game is lost
-                localStorage.removeItem('tiempo'); // This effectively resets the timer for a new game
-            }
-            tiempo--;
-        }, 1000);
-    </script>
+    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
     <div class="image-container">
         <img id="mainImage" src="/imgs/Libreria_secreta.png" alt="Imagen Principal">
         <div class="button-container">
