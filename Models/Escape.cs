@@ -5,7 +5,7 @@ class Escape{
     static DateTime startTime;
     static TimeSpan gameDuration = TimeSpan.FromMinutes(5);
     private static void InicializarJuego(){
-        incognitasSalas = new string[]{"Soy el guardián de la guerra", "QUAKE", "Lorem ipsum dolor sit amet", "hey hey people sseth here"};
+        incognitasSalas = new string[]{"Soy el guardian de la guerra", "Lorem ipsum dolor sit amet" , "QUAKE", "1101"};
         estadoJuego = 1;
         System.Timers.Timer tiempoJugado = new System.Timers.Timer(1000);
         DateTime tiempoInicioJuego = DateTime.Now;
