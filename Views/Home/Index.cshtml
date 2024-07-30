@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/css/Index.css">
     <title>Sala de escape</title>
   </head>
+  <script>
+    localStorage.removeItem('tiempo');
+  </script>
   <body>
     <header>
       <div class="header-content">
@@ -20,7 +23,6 @@
         <nav>
           <ul class="header-links">
             <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
-            <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
             <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
           </ul>
         </nav>
@@ -31,5 +33,5 @@
       <img src="/imgs/castle.jpg" class="center-image" alt="Castle Image">
       <button class="btn-play" onclick="location.href='@Url.Action("Comenzar", "Home")'">Jugar</button>
     </div>
-  </body>
+</body>
 </html>
