@@ -38,6 +38,6 @@ class Escape{
     }
     private static void Tick(object sender, ElapsedEventArgs e)
     {
-        Console.WriteLine("Tick! The time is {0:HH:mm:ss.fff}", e.SignalTime);
+        //Console.WriteLine("Tick! The time is {0:HH:mm:ss.fff}", e.SignalTime);
     }
 }
