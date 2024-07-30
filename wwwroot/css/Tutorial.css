@@ -3,7 +3,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background: url('https://www.example.com/your-background-image.jpg') no-repeat center center fixed;
     background-size: cover;
 }
@@ -27,8 +27,9 @@ main {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .my-button:hover {
     background-color: #45a049;
