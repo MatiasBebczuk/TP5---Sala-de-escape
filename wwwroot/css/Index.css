@@ -47,3 +47,8 @@ header {
 .header-links a:hover {
     color: #ffcc00; /* Cambia de color al pasar el mouse */
 }
+
+body img{
+    display: flex;
+    justify-content: center;
+}
