@@ -1,9 +1,80 @@
-*{
-    text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
-h1{
-    color: #fff;
-  }
-  h2{
-    color: #fff;
-  }
+
+.image-container {
+  position: relative;
+  width: 80%; /* Ajustar según necesites */
+  height: 80%; /* Ajustar según necesites */
+}
+
+#mainImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 60px; /* Espacio entre los botones (en píxeles) */
+}
+
+.overlay-button {
+  width: 90px; /* Tamaño uniforme */
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.overlay-button:hover {
+  transform: scale(2.5); /* Agrandar el botón al pasar el ratón */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar sombra para efecto visual */
+}
+
+#toggleImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  display: none;
+  background: transparent;
+}
+
+/* Imágenes específicas para cada botón */
+#toggleButton1 {
+  background-image: url('2_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+}
+
+#toggleButton2 {
+  background-image: url('2_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+}
+
+#toggleButton3 {
+  background-image: url('3_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+}
+
+#toggleButton4 {
+  background-image: url('4_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+}
+
+#toggleButton5 {
+  background-image: url('5_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+}
