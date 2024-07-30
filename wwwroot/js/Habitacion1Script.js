@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlays = document.querySelectorAll('.image-overlay');
 
     buttons.forEach((button, index) => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(){
             const currentOverlay = overlays[index];
             const isVisible = currentOverlay.style.display === 'block';
 

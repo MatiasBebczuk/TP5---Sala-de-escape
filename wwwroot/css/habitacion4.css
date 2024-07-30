@@ -1,0 +1,68 @@
+body h1, body form{
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+#mainImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay-button {
+    position: absolute;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.overlay-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* Positioning buttons */
+#toggleButton1 {
+    top: 30%;
+    right: 20%;
+}
+
+#toggleButton2 {
+    top: 50%;
+    right: 20%;
+}
+
+#toggleButton3 {
+    bottom: 30%;
+    right: 20%;
+}
+
+#toggleButton4 {
+    top: 30%;
+    left: 20%;
+}
+
+#toggleButton5 {
+    bottom: 30%;
+    left: 20%;
+}
+
+#toggleImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    display: none;
+    background: transparent;
+}

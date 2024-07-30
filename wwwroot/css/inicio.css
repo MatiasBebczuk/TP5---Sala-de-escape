@@ -1,17 +1,18 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+body h1, body form{
+  display: flex;
+  justify-content: center;
+}
+
+body div{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
 }
 
 .image-container {
   position: relative;
-  width: 80%; /* Ajustar según necesites */
-  height: 80%; /* Ajustar según necesites */
+  width: 80%;
+  height: 80%;
 }
 
 #mainImage {
@@ -60,21 +61,21 @@ body, html {
 
 /* Imágenes específicas para cada botón */
 #toggleButton1 {
-  background-image: url('2_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+  background-image: url('/imgs/Habitacion_1/2_Habitacion_1.png');
 }
 
 #toggleButton2 {
-  background-image: url('2_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+  background-image: url('/imgs/Habitacion_1/2_Habitacion_1.png');
 }
 
 #toggleButton3 {
-  background-image: url('3_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+  background-image: url('/imgs/Habitacion_1/3_Habitacion_1.png');
 }
 
 #toggleButton4 {
-  background-image: url('4_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+  background-image: url('/imgs/Habitacion_1/4_Habitacion_1.png');
 }
 
 #toggleButton5 {
-  background-image: url('5_Habitacion_1.png'); /* Cambiar a la imagen deseada */
+  background-image: url('/imgs/Habitacion_1/5_Habitacion_1.png');
 }

@@ -7,10 +7,6 @@ class Escape{
     private static void InicializarJuego(){
         incognitasSalas = new string[]{"Soy el guardian de la guerra", "QUAKE" , "Lorem ipsum dolor sit amet", "1101"};
         estadoJuego = 1;
-        System.Timers.Timer tiempoJugado = new System.Timers.Timer(1000);
-        DateTime tiempoInicioJuego = DateTime.Now;
-        tiempoJugado.Elapsed += Tick;
-        tiempoJugado.Enabled = true;
     }
 
     public static int GetEstadoJuego()
@@ -35,9 +31,5 @@ class Escape{
     }
     public static void Reset(){
         estadoJuego = 0;
-    }
-    private static void Tick(object sender, ElapsedEventArgs e)
-    {
-        //Console.WriteLine("Tick! The time is {0:HH:mm:ss.fff}", e.SignalTime);
     }
 }

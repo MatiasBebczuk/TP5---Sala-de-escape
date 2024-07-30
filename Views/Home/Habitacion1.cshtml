@@ -15,26 +15,26 @@
     <h2>Te encuentras en un vestibulo el cual al entrar, su puerta se bloquea y solo se puede 
     desbloquear con un código, en este vestíbulo se encuentran muchos libros para investigar... </h2>
     <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
-<script>
-                let tiempo = parseInt(localStorage.getItem('tiempo')) || 6000;
-                    
-                let timer = setInterval(function() {
-                    let minutes = Math.floor(tiempo / 60);
-                    let seconds = tiempo % 60;
-                    document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    <script>
+        let tiempo = parseInt(localStorage.getItem('tiempo')) || 6000;
             
-              
-                    localStorage.setItem('tiempo', tiempo);
-            
-                    if (tiempo <= 0) {
-                        clearInterval(timer);
-                        alert("¡Se acabó el tiempo!");
-                       
-                        localStorage.removeItem('tiempo'); 
-                    }
-                    tiempo--;
-                }, 1000);
-            </script>
+        let timer = setInterval(function() {
+            let minutes = Math.floor(tiempo / 60);
+            let seconds = tiempo % 60;
+            document.getElementById('tiempo').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    
+        
+            localStorage.setItem('tiempo', tiempo);
+    
+            if (tiempo <= 0) {
+                clearInterval(timer);
+                alert("¡Se acabó el tiempo!");
+                
+                localStorage.removeItem('tiempo'); 
+            }
+            tiempo--;
+        }, 1000);
+    </script>
     <div class="image-container">
         <img id="mainImage" src="/imgs/Vestibulo.png" alt="Imagen Principal">
         <div class="button-container">
