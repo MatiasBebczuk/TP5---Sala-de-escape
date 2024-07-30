@@ -10,7 +10,8 @@ let timer = setInterval(function() {
 
     if (tiempo <= 0) {
         clearInterval(timer);
-        alert("¡Se acabó el tiempo!");
+        var url = 'Home/Derrota/' + id;
+        window.location.href = url;
         
         localStorage.removeItem('tiempo');
     }

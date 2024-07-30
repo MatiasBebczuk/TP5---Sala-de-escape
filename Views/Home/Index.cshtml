@@ -10,27 +10,26 @@
     <link rel="stylesheet" href="/css/Index.css">
     <title>Sala de escape</title>
   </head>
-
-<header>
- 
-<div class="text-center">   
-    <h1 class="display-4">Welcome</h1>
-    <p>To the dungeon</p>
-</div>
-    <div class="header-content">
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="text-center">
+          <h1 class="display-4">Welcome</h1>
+          <p>To the dungeon</p>
+        </div>
         <nav>
-            <ul class="header-links">
-                <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
-                <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
-                <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
-            </ul>
+          <ul class="header-links">
+            <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial del juego</a></li>
+            <li><a href='@Url.Action("Comenzar", "Home")'>Inicio del juego</a></li>
+            <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
+          </ul>
         </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <img src="/imgs/castle.jpg" class="center-image" alt="Castle Image">
+      <button class="btn-play" onclick="location.href='@Url.Action("Comenzar", "Home")'">Jugar</button>
     </div>
-</header>
-    <script>
-        localStorage.removeItem('tiempo');
-    </script>
-    <body>
-        <img src= "/imgs/castle.jpeg">
-    </body>
+  </body>
 </html>
