@@ -57,7 +57,7 @@ h1, h2 {
   }
   
   .overlay-button:hover {
-    transform: scale(2.5); /* Agrandar el botón al pasar el ratón */
+    transform: scale(3.5); /* Agrandar el botón al pasar el ratón */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar sombra para efecto visual */
   }
   

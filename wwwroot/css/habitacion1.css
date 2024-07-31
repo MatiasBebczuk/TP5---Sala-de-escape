@@ -57,7 +57,7 @@ h1, h2 {
 }
 
 .overlay-button:hover {
-  transform: scale(1.5);
+  transform: scale(2.5);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
