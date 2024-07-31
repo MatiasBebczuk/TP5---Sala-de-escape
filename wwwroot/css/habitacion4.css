@@ -1,8 +1,27 @@
-body h1, body form{
-    display: flex;
-    justify-content: center;
-}
-
+body {
+    font-family: Arial, sans-serif;
+    background: #222; /* Dark background to emphasize content */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1, h2 {
+    margin: 10px 0;
+  }
+  
+  .Tempo {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
 .image-container {
     position: relative;
     text-align: center;
@@ -66,3 +85,62 @@ body h1, body form{
     display: none;
     background: transparent;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  form label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  form input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  .hint-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .hint-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hint-buttons button:hover {
+    background-color: #ffcc00;
+    color: #333;
+  }

@@ -26,7 +26,6 @@ h1, h2 {
   position: relative;
   width: 80%;
   margin: 20px auto;
-  text-align: center;
 }
 
 #mainImage {
@@ -43,7 +42,7 @@ h1, h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 20px;
+  gap: 60px;
 }
 
 .overlay-button {
@@ -60,6 +59,28 @@ h1, h2 {
 .overlay-button:hover {
   transform: scale(1.5);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Specific images for each button */
+#toggleButton1 {
+  background-image: url('/imgs/Habitacion_1/1_Habitacion_1.png');
+}
+
+#toggleButton2 {
+  background-image: url('/imgs/Habitacion_1/2_Habitacion_1.png');
+}
+
+#toggleButton3 {
+  background-image: url('/imgs/Habitacion_1/3_Habitacion_1.png');
+}
+
+#toggleButton4 {
+  background-image: url('/imgs/Habitacion_1/4_Habitacion_1.png');
+}
+
+#toggleButton5 {
+  background-image: url('/imgs/Habitacion_1/5_Habitacion_1.png');
 }
 
 form {
@@ -119,25 +140,4 @@ form input[type="submit"]:hover {
 .hint-buttons button:hover {
   background-color: #ffcc00;
   color: #333;
-}
-
-/* Specific images for each button */
-#toggleButton1 {
-  background-image: url('/imgs/Habitacion_1/1_Habitacion_1.png');
-}
-
-#toggleButton2 {
-  background-image: url('/imgs/Habitacion_1/2_Habitacion_1.png');
-}
-
-#toggleButton3 {
-  background-image: url('/imgs/Habitacion_1/3_Habitacion_1.png');
-}
-
-#toggleButton4 {
-  background-image: url('/imgs/Habitacion_1/4_Habitacion_1.png');
-}
-
-#toggleButton5 {
-  background-image: url('/imgs/Habitacion_1/5_Habitacion_1.png');
 }
