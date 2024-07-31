@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/css/habitacion1.css">
     <script src="/js/Habitacion1Script.js"></script>
     <script src="/js/timer.js"></script>
+    <script>
+        let tiemp = @ViewBag.tiemp;
+        localStorage.setItem('tiemp', tiemp);
+    </script>
     <title>Habitacion 1</title>
 </head>
 <body>
@@ -17,6 +21,7 @@
         <h2>Te encuentras en un vestíbulo el cual al entrar, su puerta se bloquea y solo se puede 
         desbloquear con un código. En este vestíbulo se encuentran muchos libros para investigar...</h2>
         <h2 class="Tempo">Temporizador: <span id="tiempo"></span></h2>
+        <h4>@ViewBag.Error</h4>
     </header>
 
     <div class="image-container">
@@ -41,6 +46,8 @@
         <button onclick="alert('Pista 1: Lee los libros, quizá haya una combinación que encuentres...')">Pista 1</button>
         <button onclick="alert('Pista 2: Observa las palabras subrayadas de cada libro...')">Pista 2</button>
     </div>
+    <section>
+        <a href='@Url.Action("Index", "Home")'>Rendirse</a>
+    </section>
 </body>
 </html>
-    

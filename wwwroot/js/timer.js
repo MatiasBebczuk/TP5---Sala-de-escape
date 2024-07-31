@@ -1,4 +1,4 @@
-let tiempo = parseInt(localStorage.getItem('tiempo')) || 300;
+let tiempo = parseInt(localStorage.getItem('tiempo')) || localStorage.getItem('tiemp');
     
 let timer = setInterval(function() {
     let minutes = Math.floor(tiempo / 60);
@@ -10,8 +10,7 @@ let timer = setInterval(function() {
 
     if (tiempo <= 0) {
         clearInterval(timer);
-        var url = 'Home/Derrota/' + id;
-        window.location.href = url;
+        window.location.href = "Derrota";
         
         localStorage.removeItem('tiempo');
     }

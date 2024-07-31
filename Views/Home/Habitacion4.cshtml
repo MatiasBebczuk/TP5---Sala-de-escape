@@ -12,9 +12,12 @@
     <title>Habitacion 4</title>
 </head>
 <body>
-    <h1>La Llave Final</h1>
-    <h2>Estas en la última habitación para poder salir del castillo, en alguna parte debería da haber una llave para salir de aquí. </h2>
-    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+    <header>
+        <h1>La Llave Final</h1>
+        <h2>Estas en la última habitación para poder salir del castillo, en alguna parte debería da haber una llave para salir de aquí. </h2>
+        <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+        <h4>@ViewBag.Error</h4>
+    </header>
     <div class="image-container">
         <img src="/imgs/HabitacionFinal.jpeg" alt="Imagen Central" id="mainImage">
         <button class="overlay-button" id="toggleButton1"><i class="fas fa-eye"></i></button>
@@ -30,7 +33,12 @@
         <input type="text" id="clave" name="clave" required>
         <input type="submit" value="VALIDAR"> 
     </form> 
-    <button onclick="alert('Pista 1: Busca por los cajones...')">Pista 1</button>
-    <button onclick="alert('Pista 2: ¿Has buscado bien? Seguro la llave debe de estar por allí...')">Pista 2</button>
+    <div class="hint-buttons">
+        <button onclick="alert('Pista 1: Busca por los cajones...')">Pista 1</button>
+        <button onclick="alert('Pista 2: ¿Has buscado bien? Seguro la llave debe de estar por allí...')">Pista 2</button>
+    </div>
+    <section>
+        <a href='@Url.Action("Index", "Home")'>Rendirse</a>
+    </section>
 </body>
 </html>

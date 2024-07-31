@@ -29,8 +29,9 @@ namespace TP5___Sala_de_escape.Controllers
             return View();
         }
 
-        public IActionResult Comenzar()
+        public IActionResult Comenzar(int tiemp)
         {
+            ViewBag.tiemp = tiemp;
             return View("Habitacion1");
         }
 
@@ -39,7 +40,7 @@ namespace TP5___Sala_de_escape.Controllers
             string habitacion = "Habitacion";
             bool salaResuelta = Escape.ResolverSala(sala, clave);
             
-            if (sala != Escape.GetEstadoJuego() - 1)
+            if (sala != Escape.GetEstadoJuego())
             {
                 return View((habitacion + Escape.GetEstadoJuego()));
             }
@@ -49,13 +50,17 @@ namespace TP5___Sala_de_escape.Controllers
                 {
                     ViewBag.Error = "La respuesta escrita fue incorrecta.";
                 }
-                else if (Escape.GetEstadoJuego() > 4)
+                else if (Escape.GetEstadoJuego() == 4)
                 {
                     habitacion = "Victoria";
+                    ViewBag.cantIntentos = Escape.cantIntentos;
+                    ViewBag.cantPistas = Escape.cantPistas;
+                }
+                else{
+                    Escape.AumentarEstadoJuego();
                 }
             }
             if(habitacion != "Victoria"){ habitacion += Escape.GetEstadoJuego(); }
-            Console.WriteLine(habitacion);
             return View(habitacion);
         }
 

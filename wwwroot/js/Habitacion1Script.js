@@ -14,14 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             currentOverlay.style.display = isVisible ? 'none' : 'block';
         });
     });
-
-    // Ocultar todas las imágenes cuando se haga clic fuera de ellas (opcional)
-    document.addEventListener('click', function(event) {
-        if (!event.target.classList.contains('overlay-button') &&
-            !event.target.classList.contains('image-overlay')) {
-            overlays.forEach(overlay => overlay.style.display = 'none');
-        }
-    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -3,14 +3,16 @@
 }
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derrota</title>
-</head>
-<body>
-<script> localStorage.removeItem('tiempo'); </script>
-    <h1>¡Has perdido!</h1>
-    <p>El tiempo se ha agotado.</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/Derrota.css">
+        <title>Derrota</title>
+    </head>
+    <body>
+        <script> localStorage.removeItem('tiempo'); </script>
+        <h1>¡Has perdido!</h1>
+        <p>El tiempo se ha agotado.</p>
+        <button class="btn-play" onclick="location.href='@Url.Action("Index", "Home")'">Menu principal</button>
+    </body>
 </html>

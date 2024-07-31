@@ -12,6 +12,7 @@
   </head>
   <script>
     localStorage.removeItem('tiempo');
+    localStorage.setItem('cantPistas', 0);
   </script>
   <body>
     <header>
@@ -28,10 +29,18 @@
         </nav>
       </div>
     </header>
-
-    <div class="container">
-      <img src="/imgs/castle.jpg" class="center-image" alt="Castle Image">
-      <button class="btn-play" onclick="location.href='@Url.Action("Comenzar", "Home")'">Jugar</button>
-    </div>
+    <form method="post" action='@Url.Action("Comenzar", "Home")'>
+      <select name="tiemp">
+        <option value="390">I'm Too Young To Die</option>
+        <option selected value="300">Hurt Me Plenty</option>
+        <option value="240">Ultra Violence</option>
+        <option value="18">Nightmare</option>
+        <option value="90">Ultra Nightmare</option>
+      </select>
+      <div class="container">
+        <img src="/imgs/castle.jpg" class="center-image" alt="Castle Image">
+        <input class="btn-play" type="submit" value="Jugar">
+      </div>
+    </form>
 </body>
 </html>

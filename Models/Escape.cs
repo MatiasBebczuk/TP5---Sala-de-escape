@@ -2,11 +2,12 @@ using System.Timers;
 class Escape{
     public static string[] incognitasSalas = new string[4];
     static int estadoJuego;
-    static DateTime startTime;
-    static TimeSpan gameDuration = TimeSpan.FromMinutes(5);
+    public static int cantIntentos, cantPistas;
     private static void InicializarJuego(){
         incognitasSalas = new string[]{"soy el guardian de la guerra", "quake" , "lorem ipsum dolor sit amet", "1101"};
         estadoJuego = 1;
+        cantIntentos = 0;
+        cantPistas = 0;
     }
 
     public static int GetEstadoJuego()
@@ -16,18 +17,18 @@ class Escape{
     public static bool ResolverSala(int sala, string incognita){
         if(estadoJuego == 0){ InicializarJuego();}
         if(estadoJuego != sala){
-            Console.WriteLine("estadoJuego != sala");
             return false;
         }
         else if(incognitasSalas[sala - 1] == incognita.ToLower()){
-            Console.WriteLine("incognitasSalas[sala - 1] == incognita");
-            estadoJuego++;
             return true;
         }
         else{
-            Console.WriteLine("return false;");
+            cantIntentos++;
             return false;
         }
+    }
+    public static void AumentarEstadoJuego(){
+        estadoJuego++;
     }
     public static void Reset(){
         estadoJuego = 0;

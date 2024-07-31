@@ -3,16 +3,19 @@
 }
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/Victoria.css">
-    <title>Victoria</title>
-</head>
-<body>
-    <h1>Te pasaste el juego!!!</h1>
-    <h2>Gracias por jugar esta aberracion :))</h2>
-    <img src = "/imgs/fireworks.gif" alt="Fuegos artificiales">
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/Victoria.css">
+        <script src="/js/Pistas.js"></script>
+        <title>Victoria</title>
+    </head>
+    <body>
+        <h1>¡Felicitaciones, lograste escapar!</h1>
+        <img src = "/imgs/walkingCycle.gif" alt="Hombre caminando">
+        <h2>Luego de recorrer el castillo, lograste encontrar el elixir de la vida eterna, pero el alquimista no estara feliz cuando se entere de la desaparicion de este</h2>
+        <h2>Continuara...</h2>
+        <h4>Intentos fallidos: @ViewBag.cantIntentos</h4>
+        <button class="btn-play" onclick="location.href='@Url.Action("Index", "Home")'">Menu principal</button>
+    </body>
 </html>

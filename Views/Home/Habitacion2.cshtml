@@ -13,9 +13,12 @@
     <title>Habitacion 2</title>
 </head>
 <body>
-    <h1>El Laboratorio</h1>
-    <h2>Logras salir del vestibulo y te encuentras en un laboratorio sin salida, en este laboratorio se encuentran muchas pocimas y libros extraños, quizá uno de estos tenga la solución para salir de aquí... </h2>
-    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+    <header>
+        <h1>El Laboratorio</h1>
+        <h2>Logras salir del vestibulo y te encuentras en un laboratorio sin salida, en este laboratorio se encuentran muchas pocimas y libros extraños, quizá uno de estos tenga la solución para salir de aquí... </h2>
+        <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+        <h4>@ViewBag.Error</h4>
+    </header>
     <div class="image-container">
         <img src="/imgs/Labo_1.png" alt="Imagen Central" id="mainImage">
         <button class="overlay-button" id="toggleButton1"><i class="fas fa-eye"></i></button>
@@ -26,13 +29,18 @@
         <img src="/imgs/A_Habitacion_3.png" alt="Habitación" id="toggleImage">
     </div>
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
-    <input type="hidden" name="sala" value="2">
-    <label for="clave">Ingresa la clave: </label>
-    <input type="text" id="clave" name="clave" required>
-    <input type="submit" value="VALIDAR"> 
+        <input type="hidden" name="sala" value="2">
+        <label for="clave">Ingresa la clave: </label>
+        <input type="text" id="clave" name="clave" required>
+        <input type="submit" value="VALIDAR"> 
     </form> 
 
-    <button onclick="alert('Pista 1: Debes de buscar por las pocimas, quizá encuentres algo allí...')">Pista 1</button>
-    <button onclick="alert('Pista 2: Busca las letras de las pocimas para llegar a una palabra coherente... ')">Pista 2</button>
+    <div class="hint-buttons">
+        <button onclick="alert('Pista 1: Debes de buscar por las pocimas, quizá encuentres algo allí...')">Pista 1</button>
+        <button onclick="alert('Pista 2: Busca las letras de las pocimas para llegar a una palabra coherente... ')">Pista 2</button>
+    </div>
+    <section>
+        <a href='@Url.Action("Index", "Home")'>Rendirse</a>
+    </section>
 </body>
 </html>

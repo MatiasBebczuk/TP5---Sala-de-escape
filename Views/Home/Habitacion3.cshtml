@@ -12,9 +12,12 @@
     <title>Habitacion 3</title>
 </head>
 <body>
-    <h1>La Biblioteca Secreta</h1>
-    <h2>Haz logrado salir del laboratiorio pero...de rependete...te encuentras con una biblioteca oculta detrás de una estantería giratoria, llena de libros de magia y runas.</h2>
-    <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+    <header>
+        <h1>La Biblioteca Secreta</h1>
+        <h2>Haz logrado salir del laboratiorio pero...de rependete...te encuentras con una biblioteca oculta detrás de una estantería giratoria, llena de libros de magia y runas.</h2>
+        <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
+        <h4>@ViewBag.Error</h4>
+    </header>
     <div class="image-container">
         <img id="mainImage" src="/imgs/Libreria_secreta.png" alt="Imagen Principal">
         <div class="button-container">
@@ -31,8 +34,12 @@
         <input type="text" id="clave" name="clave" required>
         <input type="submit" value="VALIDAR"> 
     </form> 
-
-    <button onclick="alert('Pista 1: Observa los hechizos...')">Pista 1</button>
-    <button onclick="alert('Pista 2: ¿En qué coinciden todos?')">Pista 2</button>
+    <div class="hint-buttons">
+        <button onclick="alert('Pista 1: Observa los hechizos...')">Pista 1</button>
+        <button onclick="alert('Pista 2: ¿En qué coinciden todos?')">Pista 2</button>
+    </div>
+    <section>
+        <a href='@Url.Action("Index", "Home")'>Rendirse</a>
+    </section>
 </body>
 </html>

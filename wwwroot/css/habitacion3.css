@@ -151,3 +151,12 @@ form input[type="submit"]:hover {
   background-color: #ffcc00;
   color: #333;
 }
+
+body section a{
+  color: white;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body section a:visited{
+  color: white;
+}
