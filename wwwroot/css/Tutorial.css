@@ -3,9 +3,19 @@ main div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 40vh;
+    margin-left: 25%;
+    margin-top: 3%;
 }
-
+button {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+    margin-left: 50%;     
+}
 .welcome-text {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
