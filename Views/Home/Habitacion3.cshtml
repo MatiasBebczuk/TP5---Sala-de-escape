@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>La Biblioteca Secreta</h1>
-        <h2>Haz logrado salir del laboratiorio pero...de rependete...te encuentras con una biblioteca oculta detrás de una estantería giratoria, llena de libros de magia y runas.</h2>
+        <h2>Haz logrado salir del laboratiorio pero...de repente...te encuentras con una biblioteca oculta detrás de una estantería giratoria, llena de libros de magia y runas.</h2>
         <h2 class="Tempo">Temportizador: <span id="tiempo"></span></h2>
         <h4>@ViewBag.Error</h4>
     </header>
@@ -31,7 +31,7 @@
     <form method="Post" action='@Url.Action("Habitacion", "Home")'>
         <input type="hidden" name="sala" value="3">
         <label for="clave">Ingresa la clave: </label>
-        <input type="text" id="clave" name="clave" required>
+        <input autocomplete="off" type="text" id="clave" name="clave" required>
         <input type="submit" value="VALIDAR"> 
     </form> 
     <div class="hint-buttons">
